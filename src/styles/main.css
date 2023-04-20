@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/*** some base definitions from https://piccalil.li/blog/a-modern-css-reset/ ***/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+a {
+  color: black !important;
+  cursor: pointer;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#root {
+  width: 100vw;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  width: 100vw;
+  color: black;
+  font-weight: 300;
+}
+
+.custom-btn {
+  background: none;
+  border: none;
+  outline: unset;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.custom-btn:hover, .custom-btn:focus {
+  border: none;
+  outline: unset;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.lang-options {
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 1vw;
+  margin-top: 20px;
+  padding: 0px 50px;
+}
+
+.navbar-container {
+  padding: 10px 50px;
+  font-size: 1.25vw;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-container #logo-img {
+  width: 100px;
+}
+
+.main-page-container {
+  margin-top: 20px;
+}
+
+.main-info-container {
+  position: absolute;
+  margin: 0 auto;
+  z-index: 10010;
+  width: 50vw;
+  height: 40vh;
+  background-color: rgba(167, 134, 129, 0.6);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  top: 40vh;
+  left: 25vw;
+}
+@media screen and (min-width: 1441px) {
+  .main-info-container {
+    height: 450px;
+  }
+}
+
+.react-multi-carousel-list {
+  height: 78vh;
+}
+
+.h2-title {
+  font-size: 2.5vw;
+}
+@media screen and (min-width: 2100px) {
+  .h2-title {
+    font-size: 48px;
+  }
+}
+
+.h3-title {
+  font-weight: 500;
+  font-size: 1.5vw;
+}
+@media screen and (min-width: 2100px) {
+  .h3-title {
+    font-size: 32px;
+  }
+}
+
+#shop {
+  padding: 0px 50px;
+  margin-top: 50px;
+  min-height: 80vh;
+}
+
+.shop-item {
+  width: 250px;
+  height: 250px;
+  margin: 20px 40px;
+  cursor: pointer;
+}
+.shop-item .shop-item-details {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  background-color: rgba(250, 223, 224, 0.5);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  transition: all 0.2s ease-in;
+}
+.shop-item img {
+  height: 250px;
+  width: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#shop ul {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+#shop ul li {
+  transition: all 0.2s ease-in;
+}
+#shop ul li:hover {
+  opacity: 0.6;
+}
+
+#sizeSelect, #colorSelect, #emailInput, #phoneNumberInput, #usernameInput, #amountSelect {
+  height: 25px;
+}
+
+#comments {
+  height: 80px;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+$dark-beige: rgba(167, 134, 129, 1);
+$light-pink: rgba(250, 223, 224, 1);
+$font-size: 16px;
+$font-montserrat: 'Montserrat', sans-serif;
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/*** some base definitions from https://piccalil.li/blog/a-modern-css-reset/ ***/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+a {
+  color: black !important;
+  cursor: pointer;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+#root {
+  width: 100vw;
+}
+
+body {
+  font-family: $font-montserrat;
+  font-size: $font-size;
+  width: 100vw;
+  color: black;
+  font-weight: 300;
+}
+
+.custom-btn {
+  background: none;
+  border: none;
+  outline: unset;
+  font-size: 11px;
+  text-transform: uppercase;
+
+  &:hover, &:focus {
+    border: none;
+    outline: unset;
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.lang-options {
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 1vw;
+  margin-top: 20px;
+  padding: 0px 50px;
+}
+
+.navbar-container {
+  padding: 10px 50px;
+  font-size: 1.25vw;
+  align-items: center;
+  justify-content: space-between;
+
+  #logo-img {
+    width: 100px;
+  }
+}
+
+.main-page-container {
+  margin-top: 20px;
+}
+
+.main-info-container {
+  position: absolute;
+  margin: 0 auto;
+  z-index: 10010;
+  width: 50vw;
+  height: 40vh;
+  background-color: rgba(167, 134, 129, 0.6);
+  backdrop-filter: blur(2px);
+  top: 40vh;
+  left: 25vw;
+
+  @media screen and (min-width: 1441px) {
+    height: 450px;
+  }
+  // transform: translate(-50%, -65%);
+}
+
+.react-multi-carousel-list {
+  height: 78vh;
+}
+
+.h2-title {
+  font-size: 2.5vw;
+
+  @media screen and (min-width: 2100px) {
+    font-size: 48px;
+  }
+}
+
+.h3-title {
+  font-weight: 500;
+  font-size: 1.5vw;
+
+  @media screen and (min-width: 2100px) {
+    font-size: 32px;
+  }
+}
+
+#shop {
+  padding: 0px 50px;
+  margin-top: 50px;
+  min-height: 80vh;
+}
+
+.shop-item {
+  width: 250px;
+  height: 250px;
+  // flex-basis: 33%;
+  margin: 20px 40px;
+  cursor: pointer;
+
+  .shop-item-details {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(250, 223, 224, 0.5);
+    backdrop-filter: blur(3px);
+    transition: all 0.2s ease-in;
+  }
+
+  img {
+    height: 250px;
+    width: 250px;
+    object-fit: contain;
+  }
+}
+
+#shop ul {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+
+  li {
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+#sizeSelect, #colorSelect, #emailInput, #phoneNumberInput, #usernameInput, #amountSelect {
+  height: 25px;
+}
+
+#comments {
+  height: 80px;
+}
