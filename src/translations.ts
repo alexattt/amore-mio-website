@@ -40,7 +40,11 @@ export const translations: any = {
       'emptyField': 'Lauks nedrīkst būt tukšs',
       'emailInvalid': 'E-pasta adreses formāts ir nepareizs',
       'phoneNumberInvalid': 'Telefona nr. formāts ir nepareizs',
-    }
+    },
+    'aboutUs': 'Mūsu kompānija AMORE MIO ir jauns apģērbu zīmols par pieņemamām cenām. Jauns, bet jau paspējis iegūt mūsu klientu uzticību. Mūsu nosaukums tulkojas kā "mana mīlestība", jo mēs esam pārliecināti, ka ikviena sieviete iemīlēs mūsu izstrādājumus un jutīsies vēl labāka, pārliecinātāka un maigāka nēsājot tos.\nJūs vienmēr varat ar mums sazināties un būt pārliecināti, ka tiksiet uzklausīti.\nMēs mīlam to, ko darām priekš Jums, līdz ar to neredzam robežas mūsu attīstībai un uzlabojumiem.',
+    'aboutUsSignature': 'Ar cieņu, AMORE MIO dibinātāja,\nMia',
+    'keywords': ['SKAISTUMS', 'MAIGUMS', 'VIEGLUMS', 'ELEGANCE'],
+    'socialMediaTitle': 'Mēs sociālajos tīklos'
   },
   'en': {
     'navbar': {
@@ -132,7 +136,11 @@ export const translations: any = {
       'emptyField': 'Field cannot be empty',
       'emailInvalid': 'Invalid e-mail format',
       'phoneNumberInvalid': 'Invalid phone number',
-    }
+    },
+    'aboutUs': 'Our company AMORE MIO is a new brand of clothing with reasonable prices. Despite being new, we already have managed to earn trust and build good relationships with our clients. Name of the brand means «my love»; we are more than sure that every woman will love our products and will feel better and more delicate wearing them.\nYou can always contact us and be sure that you will be heard.\nWe love what we do for you, which means we do not set any boundaries for our development and improvement.',
+    'aboutUsSignature': 'Respectfully, founder of AMORE MIO,\nMia',
+    'keywords': ['BEAUTY', 'TENDERNESS', 'LIGHTNESS', 'ELEGANCE'],
+    'socialMediaTitle': 'Our social media'
   },
   'ru': {
     'navbar': {
@@ -182,6 +190,10 @@ export const translations: any = {
       'emailEmpty': 'Поле не может остаться пустым',
       'emailInvalid': 'Некоректный формат',
       'phoneNumberInvalid': 'Некоректный формат',
-    }
+    },
+    'aboutUs': 'Наша компания AMORE MIO - это начинающий бренд одежды по приемлемым ценам. Начинающий , но уже успевший завоевать доверие и хорошие взаимоотношения с нашими клиентами. Наше название значит «моя любовь» , ведь мы уверены, что каждая девушка влюбится в наши изделия и почувствует себя в них ещё лучше и нежнее.\nВы всегда можете связаться с нами и быть уверенными, что мы вас услышим.\nМы любим то, что делаем для вас, а значит, не видит границ развития и улучшения.',
+    'aboutUsSignature': 'С уважением, основатель компании AMORE MIO,\nМия.',
+    'keywords': ['КРАСОТА', 'НЕЖНОСТЬ', 'ЛЁГКОСТЬ', 'ЭЛЕГАНТНОСТЬ'],
+    'socialMediaTitle': 'Мы в соцсетях'
   }
 }

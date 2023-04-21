@@ -5,6 +5,8 @@ import NavBar from './components/NavBar';
 import MainContainer from './components/MainContainer';
 import ShopContainer from './components/ShopContainer';
 import { translations } from './translations';
+import AboutUsContainer from './components/AboutUsContainer';
+import ContactsContainer from './components/ContactsContainer';
 
 export interface TranslationModel {
   [key: string]: any;
@@ -16,12 +18,12 @@ function App() {
   const [language, setLanguage] = useState<string>("en");
 
   // TODO:
-  // make success/error dialogs bit more minimalistic (text underline green or red?)
-  // translate about us info
-  // finalize with social media links (whatsapp or telegram?)
+  // fix problem with shop grid, should decently display three items if possible, should be responsive, now problem with item details
+  // fix hero page pink overlay positioning (it is over order form)
+  // reduce main page letter size
   // fix issue with image height not being same for wider screens. perhaps should crop all images beforehand
-  // change item price to number and euro sign add in html
   // mobile/tablet view should look good/will test
+  // change id aboutUs to about-us, contact-us to contacts
 
   return (
     <div className="main-container">
@@ -34,6 +36,8 @@ function App() {
         <NavBar />
         <MainContainer />
         <ShopContainer language={language} />
+        <AboutUsContainer />
+        <ContactsContainer />
       </langContext.Provider>
     </div>
   )

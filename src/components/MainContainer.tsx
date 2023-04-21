@@ -25,7 +25,7 @@ const MainContainer = () => {
   const translations = useContext(langContext);
 
   return (
-    <div className='main-page-container'>
+    <div id='main' className='main-page-container'>
       <div className='main-info-container'>
         <div className='flex-column' style={{ height: "100%", justifyContent: "center", alignItems: 'center', gap: "20px" }}>
           <h2 className='h2-title'>{translations.mainPage['title']}</h2>

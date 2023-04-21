@@ -102,7 +102,7 @@ const OrderForm = (
       };
 
       setIsDialogOpen(false)
-      setFailDialogOpen(true)
+      setSuccessDialogOpen(true)
 
       // emailjs.send('service_8zbsdac', 'template_vipf2ae', templateParams, 'dY4XOka6eSCzGfOL9')
       //   .then(function (response) {

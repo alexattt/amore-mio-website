@@ -1,12 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 .flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 /*** some base definitions from https://piccalil.li/blog/a-modern-css-reset/ ***/
@@ -14,8 +24,10 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* Remove default margin */
@@ -62,21 +74,29 @@ body {
   font-size: 11px;
   text-transform: uppercase;
 }
+
 .custom-btn:hover, .custom-btn:focus {
   border: none;
   outline: unset;
 }
 
 .main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100vw;
   max-width: 1440px;
   margin: 0 auto;
 }
 
 .lang-options {
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   gap: 10px;
   font-size: 1vw;
   margin-top: 20px;
@@ -86,9 +106,14 @@ body {
 .navbar-container {
   padding: 10px 50px;
   font-size: 1.25vw;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .navbar-container #logo-img {
   width: 100px;
 }
@@ -109,6 +134,7 @@ body {
   top: 40vh;
   left: 25vw;
 }
+
 @media screen and (min-width: 1441px) {
   .main-info-container {
     height: 450px;
@@ -122,6 +148,7 @@ body {
 .h2-title {
   font-size: 2.5vw;
 }
+
 @media screen and (min-width: 2100px) {
   .h2-title {
     font-size: 48px;
@@ -132,6 +159,7 @@ body {
   font-weight: 500;
   font-size: 1.5vw;
 }
+
 @media screen and (min-width: 2100px) {
   .h3-title {
     font-size: 32px;
@@ -144,38 +172,60 @@ body {
   min-height: 80vh;
 }
 
+#aboutUs {
+  padding: 0px 50px;
+  min-height: 80vh;
+}
+
+#contactUs {
+  min-height: 200px;
+  background-color: #a78681;
+}
+
 .shop-item {
-  width: 250px;
+  width: 20vw;
   height: 250px;
   margin: 20px 40px;
   cursor: pointer;
+  overflow-x: hidden;
 }
+
 .shop-item .shop-item-details {
-  position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: rgba(250, 223, 224, 0.5);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
+  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
+
 .shop-item img {
+  width: 20vw;
   height: 250px;
-  width: 250px;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
 #shop ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 20px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 #shop ul li {
+  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
+
 #shop ul li:hover {
   opacity: 0.6;
 }
@@ -186,4 +236,19 @@ body {
 
 #comments {
   height: 80px;
-}/*# sourceMappingURL=main.css.map */
+}
+
+#keywords p:nth-child(even) {
+  font-size: 21px;
+  font-weight: 600;
+  margin-top: 50px;
+  color: #fadfe0;
+  font-style: italic;
+}
+
+#keywords p:nth-child(odd) {
+  font-size: 21px;
+  font-weight: 600;
+  color: #a78681;
+}
+/*# sourceMappingURL=main.css.map */

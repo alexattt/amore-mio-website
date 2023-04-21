@@ -6,11 +6,11 @@ const NavBar = () => {
 
   return (
     <div className='flex-row navbar-container'>
-      <img id='logo-img' src='/public/images/logo.png' />
+      <a href='#main'><img id='logo-img' src='/public/images/logo.png' style={{cursor: "pointer"}}/></a>
       <div className='flex-row' style={{ gap: "45px" }}>
-        <a>{translations.navbar['about-us']}</a>
-        <a>{translations.navbar['shop']}</a>
-        <a>{translations.navbar['contacts']}</a>
+        <a href='#aboutUs'>{translations.navbar['about-us']}</a>
+        <a href='#shop'>{translations.navbar['shop']}</a>
+        <a href='#contactUs'>{translations.navbar['contacts']}</a>
       </div>
     </div>
   )

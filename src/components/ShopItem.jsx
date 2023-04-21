@@ -27,7 +27,7 @@ const customSuccessStyles = {
     width: '70vw',
     zIndex: '10100 !important',
     transform: 'translate(-50%, -50%)',
-    backgroundColor: "#80D377"
+    border: '2px solid #80D377'
   },
 };
 
@@ -41,7 +41,7 @@ const customFailStyles = {
     width: '70vw',
     zIndex: '10100 !important',
     transform: 'translate(-50%, -50%)',
-    backgroundColor: "#FF5D5D"
+    border: '2px solid #FF5D5D'
   },
 };
 

@@ -21,7 +21,7 @@ const ShopContainer = ({ language }: { language: string }) => {
   return (
     <div id='shop' className='flex-row' style={{ justifyContent: "space-between" }}>
       <div className='flex-column' style={{ alignItems: 'center', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', maxWidth: '80vw', width: '80vw' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'flex-start', maxWidth: '80vw', width: '80vw' }}>
           {currentItems.map((item: ShopItemModel) => {
             return <ShopItem itemData={item} language={language} />
           })}
