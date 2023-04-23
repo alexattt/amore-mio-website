@@ -18,7 +18,7 @@ const AboutUsContainer = () => {
       {size.width > 1024 && <div className='flex-column' style={{ alignItems: 'center', justifyContent: 'center' }}>
         <SideTitle title={translations.navbar['about-us']} />
       </div>}
-      <div className='flex-column' style={{ alignItems: 'center', justifyContent: 'center', maxWidth: '80vw', width: '80vw' }}>
+      <div className='flex-column about-us-text'>
         {aboutUs.map((sentence: string) => {
           return <p style={{ width: "70%", lineHeight: "30px", wordBreak: "break-word", textAlign: "justify" }}>{sentence}</p>
         })}
