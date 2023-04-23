@@ -32,7 +32,7 @@ const ShopContainer = ({ language }: { language: string }) => {
         <p className='horizontal-title' style={{ color: 'black' }}>{translations.shopDetails['sideTitle']}</p>
       </div>}
       <div className='flex-column' style={{ alignItems: 'center', justifyContent: 'center' }}>
-        <div className='shop-items' style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'flex-start', maxWidth: '80vw', width: '80vw' }}>
+        <div className='shop-items'>
           {currentItems.map((item: ShopItemModel) => {
             return <ShopItem itemData={item} language={language} />
           })}

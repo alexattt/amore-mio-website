@@ -13,7 +13,7 @@ const AboutUsContainer = () => {
   return (
     <div id='about-us' className={size.width < 1024 ? 'flex-column' : 'flex-row'} style={{ justifyContent: "space-between" }}>
       {size.width < 1024 && <div className='flex-row' style={{ alignItems: 'center', justifyContent: 'center' }}>
-        <p className='horizontal-title' style={{ color: 'black' }}>{translations.navbar['about-us']}</p>
+        <p className='horizontal-title' style={{ color: 'black', marginBottom: '20px' }}>{translations.navbar['about-us']}</p>
       </div>}
       {size.width > 1024 && <div className='flex-column' style={{ alignItems: 'center', justifyContent: 'center' }}>
         <SideTitle title={translations.navbar['about-us']} />
