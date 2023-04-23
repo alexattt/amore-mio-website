@@ -60,7 +60,7 @@ body {
   background: none;
   border: none;
   outline: unset;
-  font-size: 11px;
+  font-size: 16px;
   text-transform: uppercase;
 }
 .custom-btn:hover, .custom-btn:focus {

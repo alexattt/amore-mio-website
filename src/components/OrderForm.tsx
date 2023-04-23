@@ -101,7 +101,6 @@ const OrderForm = (
         clientLang: language
       };
 
-      console.log(import.meta.env.VITE_SERVICE_KEY)
       // setIsDialogOpen(false)
       // setSuccessDialogOpen(true)
 
@@ -250,7 +249,7 @@ const OrderForm = (
               </FormFeedback>}
             </FormGroup>}
             <FormText style={{ fontSize: '16px', fontWeight: '600' }}>Total order sum: {itemData.itemPrice * itemAmount}€</FormText>
-            <Button className='custom-btn' style={{ fontSize: '16px' }} type='submit'>Submit</Button>
+            <Button className='custom-btn' type='submit'>Submit</Button>
           </Form>
         </div>
       </div>
