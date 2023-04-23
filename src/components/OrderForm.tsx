@@ -5,6 +5,7 @@ import { Button, Form, FormFeedback, FormGroup, FormText, Input, Label } from 'r
 import Modal from 'react-modal';
 import { langContext } from '../App';
 import emailjs from '@emailjs/browser';
+import { secrets } from '../secrets';
 
 const responsive = {
   all: {
@@ -104,7 +105,7 @@ const OrderForm = (
       // setIsDialogOpen(false)
       // setSuccessDialogOpen(true)
 
-      emailjs.send(import.meta.env.VITE_SERVICE_KEY, import.meta.env.VITE_TEMPLATE_KEY, templateParams, import.meta.env.VITE_PUBLIC_KEY)
+      emailjs.send(secrets.serviceKey, secrets.templateKey, templateParams, secrets.publicKey)
         .then(function (response) {
           // console.log('SUCCESS!', response.status, response.text);
           setIsDialogOpen(false)
