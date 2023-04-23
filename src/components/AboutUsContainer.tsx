@@ -14,7 +14,7 @@ const AboutUsContainer = () => {
     <div
       id='about-us'
       className={size.width < 1024 ? 'flex-column' : 'flex-row'}
-      style={{ justifyContent: "space-between", gap: size.width < 1024 ? '15px' : '0px' }}
+      style={{ justifyContent: size.width < 1024 ? 'center' : 'space-between', gap: size.width < 1024 ? '15px' : '0px' }}
     >
       {size.width < 1024 && <div className='flex-row' style={{ alignItems: 'center', justifyContent: 'center' }}>
         <p className='horizontal-title' style={{ color: 'black' }}>{translations.navbar['about-us']}</p>
