@@ -19,8 +19,6 @@ function App() {
 
   // TODO:
   // fix problem with shop grid, should decently display three items in row/six per page (for future)
-  // check form on smaller screens, maybe add images on top?
-
   return (
     <div className="main-container">
       <div className='flex-row lang-options'>

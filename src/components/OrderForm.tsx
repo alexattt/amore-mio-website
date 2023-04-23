@@ -122,14 +122,14 @@ const OrderForm = (
   return (
     <>
       <div id='order-form' className='flex-row' style={{ marginTop: '20px', gap: '20px' }}>
-        <div style={{ width: '50%' }}>
+        <div className='order-form-images' style={{ width: '50%' }}>
           <Carousel responsive={responsive} showDots={true} arrows={false} swipeable={true} draggable={false}>
             {carouselImages.map((image, index) => {
               return <img key={index} src={image} alt="" />
             })}
           </Carousel>
         </div >
-        <div style={{ width: '50%' }}>
+        <div className='order-form-inputs' style={{ width: '50%' }}>
           <Form innerRef={orderFormRef} onSubmit={handleSubmit} className='flex-column' style={{ gap: '20px' }}>
             <FormGroup className='flex-column'>
               <Label for="sizeSelect">
