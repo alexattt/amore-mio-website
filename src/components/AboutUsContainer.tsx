@@ -11,9 +11,13 @@ const AboutUsContainer = () => {
   var signature = translations.aboutUsSignature.split(/[\r\n]+/);
 
   return (
-    <div id='about-us' className={size.width < 1024 ? 'flex-column' : 'flex-row'} style={{ justifyContent: "space-between" }}>
+    <div
+      id='about-us'
+      className={size.width < 1024 ? 'flex-column' : 'flex-row'}
+      style={{ justifyContent: "space-between", gap: size.width < 1024 ? '15px' : '0px' }}
+    >
       {size.width < 1024 && <div className='flex-row' style={{ alignItems: 'center', justifyContent: 'center' }}>
-        <p className='horizontal-title' style={{ color: 'black', marginBottom: '20px' }}>{translations.navbar['about-us']}</p>
+        <p className='horizontal-title' style={{ color: 'black' }}>{translations.navbar['about-us']}</p>
       </div>}
       {size.width > 1024 && <div className='flex-column' style={{ alignItems: 'center', justifyContent: 'center' }}>
         <SideTitle title={translations.navbar['about-us']} />
