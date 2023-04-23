@@ -62,11 +62,13 @@ body {
   outline: unset;
   font-size: 16px;
   text-transform: uppercase;
+  color: black;
 }
 .custom-btn:hover, .custom-btn:focus {
   border: none;
   outline: unset;
   font-size: 16px;
+  color: black;
 }
 
 .main-container {
@@ -192,6 +194,11 @@ body {
   padding: 0px 50px;
   margin-top: 50px;
   min-height: 50vh;
+}
+@media screen and (max-width: 768px) {
+  #shop, #about-us {
+    padding: 0px 15px;
+  }
 }
 
 #about-us {
