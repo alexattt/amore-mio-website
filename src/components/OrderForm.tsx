@@ -101,6 +101,7 @@ const OrderForm = (
         clientLang: language
       };
 
+      console.log(import.meta.env.VITE_SERVICE_KEY)
       // setIsDialogOpen(false)
       // setSuccessDialogOpen(true)
 
