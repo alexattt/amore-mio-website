@@ -10,6 +10,7 @@ const ContactsContainer = () => {
       <div className='flex-row' style={{ gap: "50px" }}>
         <a href='https://www.instagram.com/amoremio.lv' target='_blank'><img className='social-media-icon' src='/images/instagram_logo.png' /></a>
         <a href='https://wa.me/+37129972912' target='_blank'><img className='social-media-icon' src='/images/whatsapp_logo.png' /></a>
+        <a href='https://www.facebook.com/profile.php?id=100089543655915' target='_blank'><img className='social-media-icon' src='/images/facebook_logo.png' /></a>
       </div>
     </div>
   )

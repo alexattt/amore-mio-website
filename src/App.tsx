@@ -19,6 +19,9 @@ function App() {
 
   // TODO:
   // fix problem with shop grid, should decently display three items in row/six per page (for future)
+  // add some button hover effects (underline)
+  // add some animations perhaps
+
   return (
     <div className="main-container">
       <div className='flex-row lang-options'>
