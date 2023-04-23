@@ -85,41 +85,73 @@ body {
 .lang-options {
   justify-content: flex-end;
   gap: 10px;
-  font-size: 1vw;
+  font-size: 0.85vw;
   margin-top: 20px;
   padding: 0px 50px;
+
+  @media screen and (max-width: 500px) {
+    font-size: 14px;
+    gap: 30px;
+    padding: 0px 30px;
+    opacity: 0.5;
+  }
 }
 
 .navbar-container {
   padding: 10px 50px;
-  font-size: 1.25vw;
+  font-size: 1vw;
   align-items: center;
   justify-content: space-between;
 
   #logo-img {
     width: 100px;
   }
+
+  .navbar-items {
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    justify-content: center;
+  }
 }
 
 .main-page-container {
   margin-top: 20px;
+  position: relative;
+}
+
+#main-page-img {
+  filter: contrast(95%);
+  opacity: 0.85;
 }
 
 .main-info-container {
   position: absolute;
   margin: 0 auto;
-  z-index: 10010;
+  z-index: 1;
   width: 50vw;
   height: 40vh;
-  background-color: rgba(167, 134, 129, 0.6);
-  backdrop-filter: blur(2px);
-  top: 40vh;
-  left: 25vw;
+  // background-color: rgba(167, 134, 129, 0.6);
+  background-color: rgba(250, 223, 224, 0.6);
+  backdrop-filter: blur(3px);
+  top: 50%;
+  left: 50%;
 
   @media screen and (min-width: 1441px) {
     height: 450px;
   }
-  // transform: translate(-50%, -65%);
+
+  @media screen and (max-width: 500px) {
+    width: 100vw;
+  }
+  transform: translate(-50%, -50%);
+}
+
+.ReactModalPortal {
+  z-index: 2;
 }
 
 .react-multi-carousel-list {
@@ -127,41 +159,69 @@ body {
 }
 
 .h2-title {
-  font-size: 2.5vw;
+  font-size: 1.75vw;
+  padding: 0px 20px;
+  text-align: center;
 
   @media screen and (min-width: 2100px) {
     font-size: 48px;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 18px;
   }
 }
 
 .h3-title {
   font-weight: 500;
-  font-size: 1.5vw;
+  font-size: 1.25vw;
+  padding: 0px 20px;
+  text-align: center;
 
   @media screen and (min-width: 2100px) {
     font-size: 32px;
   }
+
+  @media screen and (max-width: 500px) {
+    font-size: 12px;
+  }
 }
 
-#shop {
+#shop, #about-us {
   padding: 0px 50px;
   margin-top: 50px;
   min-height: 80vh;
 }
 
-#aboutUs {
-  padding: 0px 50px;
-  min-height: 80vh;
+#about-us {
+  font-size: 16px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
 }
 
-#contactUs {
+#contacts {
   min-height: 200px;
   background-color: $dark-beige;
 }
 
+.shop-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; 
+  justify-content: flex-start;
+  max-width: 80vw;
+  width: 80vw;
+
+  @media screen and (max-width: 1024px) {
+    justify-content: center;
+  }
+}
+
 .shop-item {
   width: 20vw;
-  height: 250px;
+  height: 20vw;
   // flex-basis: 33%;
   margin: 20px 40px;
   cursor: pointer;
@@ -179,8 +239,18 @@ body {
 
   img {
     width: 20vw;
-    height: 250px;
-    object-fit: contain;
+    height: 20vw;
+    object-fit: cover;
+
+    @media screen and (max-width: 1024px) {
+      width: 60vw;
+      height: 60vw;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 60vw;
+    height: 60vw;
   }
 }
 
@@ -206,16 +276,63 @@ body {
   height: 80px;
 }
 
+#keywords {
+  @media screen and (max-width: 768px) {
+    // flex-direction: column;
+    gap: 5px;
+  }
+}
+
 #keywords p:nth-child(even) {
   font-size: 21px;
   font-weight: 600;
   margin-top: 50px;
   color: $light-pink;
   font-style: italic;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    margin-top: 0px;
+  }
+
+  @media screen and (max-width: 575px) {
+    font-size: 12px;
+    margin-top: 0px;
+  }
 }
 
 #keywords p:nth-child(odd) {
   font-size: 21px;
   font-weight: 600;
   color: $dark-beige;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    margin-top: 0px;
+  }
+
+  @media screen and (max-width: 575px) {
+    font-size: 12px;
+    margin-top: 0px;
+  }
+}
+
+.social-media-title {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 10px;
+  color: white;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.social-media-icon {
+  width: 50px;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    width: 35px;
+  }
 }

@@ -27,7 +27,7 @@ const customSuccessStyles = {
     width: '70vw',
     zIndex: '10100 !important',
     transform: 'translate(-50%, -50%)',
-    border: '2px solid #80D377'
+    border: "2px solid #80D377"
   },
 };
 
@@ -41,7 +41,7 @@ const customFailStyles = {
     width: '70vw',
     zIndex: '10100 !important',
     transform: 'translate(-50%, -50%)',
-    border: '2px solid #FF5D5D'
+    border: "2px solid #FF5D5D"
   },
 };
 
@@ -93,7 +93,6 @@ const ShopItem = ({ itemData, language }) =>
             isOpen={failDialogOpen}
             onRequestClose={() => setFailDialogOpen(false)}
             style={customFailStyles}
-          // contentLabel="Example Modal"
           >
             <div className='flex-row' style={{ alignItems: 'baseline', justifyContent: 'space-between', textAlign: 'center' }}>
               <p style={{ fontWeight: '600' }}>{translations.orderForm['orderDenied']}</p>
@@ -109,7 +108,6 @@ const ShopItem = ({ itemData, language }) =>
             // onAfterOpen={afterOpenModal}
             onRequestClose={() => setIsDialogOpen(false)}
             style={customStyles}
-          // contentLabel="Example Modal"
           >
             <div className='flex-row' style={{ alignItems: 'baseline', justifyContent: 'space-between' }}>
               <h3>{itemData.itemName}</h3>
@@ -125,7 +123,7 @@ const ShopItem = ({ itemData, language }) =>
       <div className='shop-item' onClick={handleItemClick}>
         <img src={itemData.images[0]} style={{ position: 'absolute' }} />
         <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className='shop-item-details flex-column'
-          style={{ opacity: 0, fontSize: '1.1rem', fontWeight: '500' }}
+          style={{ opacity: 0, fontSize: '1rem', fontWeight: '500' }}
         >
           {itemData.itemName}
           <br />

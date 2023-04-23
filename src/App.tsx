@@ -18,12 +18,8 @@ function App() {
   const [language, setLanguage] = useState<string>("en");
 
   // TODO:
-  // fix problem with shop grid, should decently display three items if possible, should be responsive, now problem with item details
-  // fix hero page pink overlay positioning (it is over order form)
-  // reduce main page letter size
-  // fix issue with image height not being same for wider screens. perhaps should crop all images beforehand
-  // mobile/tablet view should look good/will test
-  // change id aboutUs to about-us, contact-us to contacts
+  // fix problem with shop grid, should decently display three items in row/six per page (for future)
+  // check form on smaller screens, maybe add images on top?
 
   return (
     <div className="main-container">
@@ -38,6 +34,9 @@ function App() {
         <ShopContainer language={language} />
         <AboutUsContainer />
         <ContactsContainer />
+        <div className='flex-row' style={{ justifyContent: 'center', marginTop: '5px', marginBottom: '5px' }}>
+          <p style={{ color: "rgba(167, 134, 129, 1)", fontSize: "10px", fontWeight: '500' }}>© AMORE MIO BRAND, 2023</p>
+        </div>
       </langContext.Provider>
     </div>
   )

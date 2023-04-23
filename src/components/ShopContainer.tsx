@@ -4,24 +4,32 @@ import { ShopItemModel } from '../models/ShopItemModel';
 import SideTitle from './shared-components/SideTitle'
 import ShopItem from './ShopItem';
 import ReactPaginate from 'react-paginate';
+import { useWindowSize } from '../helpers';
 
 const ShopContainer = ({ language }: { language: string }) => {
   const translations = useContext(langContext);
   const [itemOffset, setItemOffset] = useState(0);
+  const size = useWindowSize();
 
-  const endOffset = itemOffset + 6;
+  var itemsPerPage = 6;
+
+  if (size.width < 1024) {
+    itemsPerPage = 1;
+  }
+
+  const endOffset = itemOffset + itemsPerPage;
   const currentItems = translations.shopDetails['shopItems'].slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(translations.shopDetails['shopItems'].length / 6);
+  const pageCount = Math.ceil(translations.shopDetails['shopItems'].length / itemsPerPage);
 
   const handlePageClick = (event: any) => {
-    const newOffset = (event.selected * 6) % translations.shopDetails['shopItems'].length;
+    const newOffset = (event.selected * itemsPerPage) % translations.shopDetails['shopItems'].length;
     setItemOffset(newOffset);
   };
 
   return (
     <div id='shop' className='flex-row' style={{ justifyContent: "space-between" }}>
       <div className='flex-column' style={{ alignItems: 'center', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'flex-start', maxWidth: '80vw', width: '80vw' }}>
+        <div className='shop-items' style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'flex-start', maxWidth: '80vw', width: '80vw' }}>
           {currentItems.map((item: ShopItemModel) => {
             return <ShopItem itemData={item} language={language} />
           })}
@@ -30,7 +38,7 @@ const ShopContainer = ({ language }: { language: string }) => {
           breakLabel="..."
           nextLabel=""
           onPageChange={handlePageClick}
-          pageRangeDisplayed={6}
+          pageRangeDisplayed={itemsPerPage}
           pageCount={pageCount}
           previousLabel=""
           renderOnZeroPageCount={null}

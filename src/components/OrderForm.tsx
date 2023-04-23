@@ -101,30 +101,32 @@ const OrderForm = (
         clientLang: language
       };
 
-      setIsDialogOpen(false)
-      setSuccessDialogOpen(true)
+      // setIsDialogOpen(false)
+      // setSuccessDialogOpen(true)
 
-      // emailjs.send('service_8zbsdac', 'template_vipf2ae', templateParams, 'dY4XOka6eSCzGfOL9')
-      //   .then(function (response) {
-      //     // console.log('SUCCESS!', response.status, response.text);
-      //     setIsDialogOpen(false)
-      //     setSuccessDialogOpen(true)
-      //   }, function (error) {
-      //     // console.log('FAILED...', error);
-      //     setIsDialogOpen(false)
-      //     setFailDialogOpen(true)
-      //   });
+      emailjs.send(import.meta.env.VITE_SERVICE_KEY, import.meta.env.VITE_TEMPLATE_KEY, templateParams, import.meta.env.VITE_PUBLIC_KEY)
+        .then(function (response) {
+          // console.log('SUCCESS!', response.status, response.text);
+          setIsDialogOpen(false)
+          setSuccessDialogOpen(true)
+        }, function (error) {
+          // console.log('FAILED...', error);
+          setIsDialogOpen(false)
+          setFailDialogOpen(true)
+        });
     }
   }
+
+  var carouselImages = itemData.images.slice(1,);
 
   return (
     <>
       <div id='order-form' className='flex-row' style={{ marginTop: '20px', gap: '20px' }}>
         <div style={{ width: '50%' }}>
           <Carousel responsive={responsive}>
-            <img src="/public/images/black_robe.jpg" alt="" />
-            <img src="/public/images/white_robe.jpg" alt="" />
-            <img src="/public/images/pink_robe.jpg" alt="" />
+            {carouselImages.map((image, index) => {
+              return <img key={index} src={image} alt="" />
+            })}
           </Carousel>
         </div>
         <div style={{ width: '50%' }}>

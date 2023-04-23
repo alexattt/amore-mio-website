@@ -3,13 +3,13 @@ import { langContext } from '../App';
 
 const ContactsContainer = () => {
   const translations = useContext(langContext);
-  
+
   return (
-    <div id='contactUs' className='flex-column' style={{alignItems: 'center', justifyContent: 'center', gap: "30px"}}>
-      <p style={{ fontSize: "18px", fontWeight: 500, letterSpacing: "10px", color: 'white' }}>{translations.socialMediaTitle.toUpperCase()}</p>
-      <div className='flex-row' style={{gap: "50px"}}>
-        <img style={{width: "50px", cursor: "pointer"}} src='/images/instagram_logo.png'/>
-        <img style={{width: "50px", cursor: "pointer"}} src='/images/whatsapp_logo.png'/>
+    <div id='contacts' className='flex-column' style={{ alignItems: 'center', justifyContent: 'center', gap: "30px" }}>
+      <p className='social-media-title'>{translations.socialMediaTitle.toUpperCase()}</p>
+      <div className='flex-row' style={{ gap: "50px" }}>
+        <a href='https://www.instagram.com/amoremio.lv' target='_blank'><img className='social-media-icon' src='/images/instagram_logo.png' /></a>
+        <a href='https://wa.me/+37129972912' target='_blank'><img className='social-media-icon' src='/images/whatsapp_logo.png' /></a>
       </div>
     </div>
   )

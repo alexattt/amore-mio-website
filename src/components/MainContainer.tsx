@@ -33,13 +33,13 @@ const MainContainer = () => {
           <h3 className='h3-title'>{translations.mainPage['catchphrase']}</h3>
         </div>
       </div>
-      <Carousel responsive={responsive} autoPlay={true} autoPlaySpeed={3000} arrows={false} draggable={false} shouldResetAutoplay={true} rewindWithAnimation={true} infinite={true}>
-        <img id='main-page-img' src="/images/mock_img.png" alt="" />
-        <img id='main-page-img' src="/images/mock_img2.png" alt="" />
-        <img id='main-page-img' src="/images/mock_img3.png" alt="" />
-        <img id='main-page-img' src="/images/mock_img.png" alt="" />
-        <img id='main-page-img' src="/images/mock_img2.png" alt="" />
-        <img id='main-page-img' src="/images/mock_img3.png" alt="" />
+      <Carousel responsive={responsive} autoPlay={true} autoPlaySpeed={3000} transitionDuration={5000} arrows={false} draggable={false} shouldResetAutoplay={true} rewindWithAnimation={true} infinite={true}>
+        <img id='main-page-img' src="/images/main_img1.JPG" alt="" />
+        <img id='main-page-img' src="/images/main_img2.jpg" alt="" />
+        <img id='main-page-img' src="/images/main_img3.JPG" alt="" />
+        <img id='main-page-img' src="/images/main_img4.JPG" alt="" />
+        <img id='main-page-img' src="/images/main_img5.JPG" alt="" />
+        <img id='main-page-img' src="/images/main_img6.JPEG" alt="" />
       </Carousel>
     </div>
   )

@@ -14,11 +14,11 @@ export const translations: any = {
       'sideTitle': "VEIKALS",
       'shopItems': [
         {
-          'itemName': 'Halāts',
-          'itemPrice': 50,
+          'itemName': 'Satīna halāts',
+          'itemPrice': 40,
           'availableSizes': ['XS', 'S', 'M'],
           'availableColors': ['Melna', 'Balta', 'Rozā'],
-          'images': ['/images/shop_item.png']
+          'images': ['/images/robes.JPEG', '/images/black_robe.JPG', '/images/pink_robe.JPG', '/images/white_robe.JPG']
         },
       ]
     },
@@ -61,60 +61,11 @@ export const translations: any = {
       'sideTitle': "SHOP",
       'shopItems': [
         {
-          'itemName': 'robe',
-          'itemPrice': 50,
+          'itemName': 'Satin robe',
+          'itemPrice': 40,
           'availableSizes': ['XS', 'S', 'M'],
           'availableColors': ['Black', 'White', 'Pink'],
-          'images': ['/images/shop_item.png']
-        },
-        {
-          'itemName': 'robe2',
-          'itemPrice': 36,
-          'availableSizes': ['XS', 'S', 'M'],
-          'availableColors': ['Black', 'White', 'Pink'],
-          'images': ['/images/shop_item2.png']
-        },
-        {
-          'itemName': 'robe3',
-          'itemPrice': 45,
-          'availableSizes': ['XS', 'S', 'M'],
-          'availableColors': ['Black', 'White', 'Pink'],
-          'images': ['/images/shop_item.png', '/images/shop_item2.png']
-        },
-        {
-          'itemName': 'robe',
-          'itemPrice': 50,
-          'availableSizes': ['XS', 'S', 'M'],
-          'availableColors': ['Black', 'White', 'Pink'],
-          'images': ['/images/shop_item2.png']
-        },
-        {
-          'itemName': 'robe3',
-          'itemPrice': 36,
-          'availableSizes': ['XS', 'S', 'M'],
-          'availableColors': ['Black', 'White', 'Pink'],
-          'images': ['/images/shop_item2.png', '/images/shop_item.png']
-        },
-        {
-          'itemName': 'robe3',
-          'itemPrice': 25,
-          'availableSizes': ['XS', 'S', 'M'],
-          'availableColors': ['Black', 'White', 'Pink'],
-          'images': ['/images/shop_item.png']
-        },
-        {
-          'itemName': 'robe2',
-          'itemPrice': 36,
-          'availableSizes': ['XS', 'S', 'M'],
-          'availableColors': ['Black', 'White', 'Pink'],
-          'images': ['/images/shop_item2.png']
-        },
-        {
-          'itemName': 'robe3',
-          'itemPrice': 65,
-          'availableSizes': ['XS', 'S', 'M'],
-          'availableColors': ['Black', 'White', 'Pink'],
-          'images': ['/images/shop_item.png']
+          'images': ['/images/robes.JPEG', '/images/black_robe.JPG', '/images/pink_robe.JPG', '/images/white_robe.JPG']
         }
       ]
     },
@@ -157,20 +108,13 @@ export const translations: any = {
       'sideTitle': "МАГАЗИН",
       'shopItems': [
         {
-          'itemName': 'Халат',
-          'itemPrice': 50,
+          'itemName': 'Сатиновый халат',
+          'itemPrice': 40,
           'availableSizes': ['XS', 'S', 'M'],
           'availableColors': ['Черный', 'Белый', 'Розовый'],
-          'images': ['/images/shop_item.png']
-        },
-        {
-          'itemName': 'Красивый халат',
-          'itemPrice': 36,
-          'availableSizes': ['XS', 'S', 'M'],
-          'availableColors': ['Черный', 'Белый', 'Розовый'],
-          'images': ['/images/shop_item2.png']
-        },
-      ]
+          'images': ['/images/robes.JPEG', '/images/black_robe.JPG', '/images/pink_robe.JPG', '/images/white_robe.JPG']
+        }
+      ],
     },
     'orderForm': {
       'selectSize': 'Выберите размер: ',
