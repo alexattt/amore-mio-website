@@ -116,7 +116,6 @@ body {
 }
 
 .main-page-container {
-  margin-top: 20px;
   position: relative;
 }
 
@@ -154,7 +153,7 @@ body {
 }
 
 .react-multi-carousel-list {
-  height: 78vh;
+  height: 70vh;
 }
 
 .h2-title {
