@@ -66,6 +66,7 @@ body {
 .custom-btn:hover, .custom-btn:focus {
   border: none;
   outline: unset;
+  font-size: 16px;
 }
 
 .main-container {
@@ -190,7 +191,7 @@ body {
 #shop, #about-us {
   padding: 0px 50px;
   margin-top: 50px;
-  min-height: 80vh;
+  min-height: 50vh;
 }
 
 #about-us {
@@ -280,6 +281,7 @@ body {
 @media screen and (max-width: 768px) {
   #keywords {
     gap: 5px;
+    margin-bottom: 20px;
   }
 }
 
@@ -321,14 +323,15 @@ body {
   }
 }
 
-.social-media-title {
-  font-size: 18px;
+.horizontal-title {
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 10px;
   color: white;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
-  .social-media-title {
+  .horizontal-title {
     font-size: 14px;
   }
 }

@@ -249,7 +249,7 @@ const OrderForm = (
               </FormFeedback>}
             </FormGroup>}
             <FormText style={{ fontSize: '16px', fontWeight: '600' }}>Total order sum: {itemData.itemPrice * itemAmount}€</FormText>
-            <Button className='custom-btn' type='submit'>Submit</Button>
+            <button className='custom-btn' type='submit'>Submit</button>
           </Form>
         </div>
       </div>

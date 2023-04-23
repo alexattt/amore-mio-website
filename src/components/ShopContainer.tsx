@@ -27,7 +27,10 @@ const ShopContainer = ({ language }: { language: string }) => {
   };
 
   return (
-    <div id='shop' className='flex-row' style={{ justifyContent: "space-between" }}>
+    <div id='shop' className={size.width < 1024 ? 'flex-column' : 'flex-row'} style={{ justifyContent: "space-between" }}>
+      {size.width < 1024 && <div className='flex-row' style={{ alignItems: 'center', justifyContent: 'center' }}>
+        <p className='horizontal-title' style={{ color: 'black' }}>{translations.shopDetails['sideTitle']}</p>
+      </div>}
       <div className='flex-column' style={{ alignItems: 'center', justifyContent: 'center' }}>
         <div className='shop-items' style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'flex-start', maxWidth: '80vw', width: '80vw' }}>
           {currentItems.map((item: ShopItemModel) => {
@@ -44,9 +47,9 @@ const ShopContainer = ({ language }: { language: string }) => {
           renderOnZeroPageCount={null}
         />
       </div>
-      <div className='flex-column' style={{ alignItems: 'center', justifyContent: 'center' }}>
+      {size.width > 1024 && <div className='flex-column' style={{ alignItems: 'center', justifyContent: 'center' }}>
         <SideTitle title={translations.shopDetails['sideTitle']} />
-      </div>
+      </div>}
     </div>
   )
 }
