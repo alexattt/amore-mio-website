@@ -15,7 +15,7 @@ export const translations: any = {
       'shopItems': [
         {
           'itemName': 'Satīna halāts',
-          'itemPrice': 40,
+          'itemPrice': 45,
           'availableSizes': ['XS', 'S', 'M'],
           'availableColors': ['Melna', 'Balta', 'Rozā'],
           'images': ['/images/robes.JPEG', '/images/black_robe.JPG', '/images/pink_robe.JPG', '/images/white_robe.JPG']
@@ -62,7 +62,7 @@ export const translations: any = {
       'shopItems': [
         {
           'itemName': 'Satin robe',
-          'itemPrice': 40,
+          'itemPrice': 45,
           'availableSizes': ['XS', 'S', 'M'],
           'availableColors': ['Black', 'White', 'Pink'],
           'images': ['/images/robes.JPEG', '/images/black_robe.JPG', '/images/pink_robe.JPG', '/images/white_robe.JPG']
@@ -109,7 +109,7 @@ export const translations: any = {
       'shopItems': [
         {
           'itemName': 'Сатиновый халат',
-          'itemPrice': 40,
+          'itemPrice': 45,
           'availableSizes': ['XS', 'S', 'M'],
           'availableColors': ['Черный', 'Белый', 'Розовый'],
           'images': ['/images/robes.JPEG', '/images/black_robe.JPG', '/images/pink_robe.JPG', '/images/white_robe.JPG']
