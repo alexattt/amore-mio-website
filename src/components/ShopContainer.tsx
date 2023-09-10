@@ -31,13 +31,13 @@ const ShopContainer = ({ language }: { language: string }) => {
       id='shop'
     >
       <Title title={translations.shopDetails['sideTitle']} />
-      <Slider {...settings} slidesToShow={size.width < 1000 ? 1 : 3} lazyLoad="progressive">
+      <Slider {...settings} slidesToShow={size.width < 1000 ? 1 : 3} fade={size.width < 1000 ? true : false}  lazyLoad="progressive">
         {robes.map((item: ShopItemModel) => {
           return <ShopItem itemData={item} language={language} />
         })}
       </Slider>
       <br/>
-      <Slider {...settings} slidesToShow={size.width < 1000 ? 1 : 3} lazyLoad="progressive">
+      <Slider {...settings} slidesToShow={size.width < 1000 ? 1 : 3} fade={size.width < 1000 ? true : false} lazyLoad="progressive">
         {pyjamas.map((item: ShopItemModel) => {
           return <ShopItem itemData={item} language={language} />
         })}
