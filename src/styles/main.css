@@ -357,8 +357,13 @@ body {
   font-size: 50px !important;
 }
 
-#sizeSelect, #colorSelect, #emailInput, #phoneNumberInput, #usernameInput, #amountSelect {
-  height: 25px;
+#sizeSelect, #colorSelect, #emailInput, #phoneNumberInput, #usernameInput, #amountSelect, textarea {
+  height: 30px;
+  color: white;
+  background-color: rgb(53, 53, 53);
+  border: none;
+  padding: 5px;
+  outline: none;
 }
 
 #comments {
