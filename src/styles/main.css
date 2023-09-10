@@ -357,7 +357,7 @@ body {
   font-size: 50px !important;
 }
 
-#sizeSelect, #colorSelect, #emailInput, #phoneNumberInput, #usernameInput, #amountSelect, textarea {
+#sizeSelect, #colorSelect, #emailInput, #phoneNumberInput, #usernameInput, #amountSelect, #contactTypeSelect, textarea {
   height: 30px;
   color: white;
   background-color: rgb(53, 53, 53);
@@ -404,6 +404,9 @@ body {
   height: 90vh;
   margin-top: 20px;
   padding: 0px 70px;
+}
+#order-form .order-form-inputs .flex-row {
+  align-items: baseline;
 }
 @media screen and (max-width: 768px) {
   #order-form .order-form-inputs {
