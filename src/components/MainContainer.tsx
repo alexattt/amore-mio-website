@@ -8,7 +8,8 @@ const settings = {
   infinite: true,
   speed: 1000,
   autoplay: true,
-  arrows: false
+  arrows: false,
+  swipe: false
 };
 
 const MainContainer = () => {
