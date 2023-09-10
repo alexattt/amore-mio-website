@@ -328,11 +328,11 @@ body {
 }
 
 #shop .slick-slide {
-  opacity: 0.25;
   transition: all 0.15s ease-in-out;
 }
 #shop .slick-slide:hover {
   transform: scale(0.99);
+  opacity: 0.75;
 }
 
 #shop .slick-center {

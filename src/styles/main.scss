@@ -310,6 +310,8 @@ body {
 
 .shop-item {
   cursor: pointer;
+  // margin: 0 auto;
+  // width: 33%;
 
   img {
     margin-bottom: 10px;
@@ -324,11 +326,12 @@ body {
 }
 
 #shop .slick-slide {
-  opacity: 0.25;
+  // opacity: 0.25;
   transition: all 0.15s ease-in-out;
 
   &:hover {
     transform: scale(0.99);
+    opacity: 0.75;
   }
 }
 

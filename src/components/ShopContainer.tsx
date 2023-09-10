@@ -14,6 +14,7 @@ const settings = {
   draggable: false,
   centerMode: true,
   centerPadding: "0px",
+  initialSlide: 1,
   prevArrow: <CustomArrow/>,
   nextArrow: <CustomArrow/>
 };
@@ -22,13 +23,22 @@ const ShopContainer = ({ language }: { language: string }) => {
   const size = useWindowSize();
   const translations = useContext(langContext);
 
+  const robes = translations.shopDetails['shopItems'].filter((item: any) => item.id === "robe")
+  const pyjamas = translations.shopDetails['shopItems'].filter((item: any) => item.id === "pyjama")
+
   return (
     <div
       id='shop'
     >
       <Title title={translations.shopDetails['sideTitle']} />
       <Slider {...settings} slidesToShow={size.width < 1000 ? 1 : 3} lazyLoad="progressive">
-        {translations.shopDetails['shopItems'].map((item: ShopItemModel) => {
+        {robes.map((item: ShopItemModel) => {
+          return <ShopItem itemData={item} language={language} />
+        })}
+      </Slider>
+      <br/>
+      <Slider {...settings} slidesToShow={size.width < 1000 ? 1 : 3} lazyLoad="progressive">
+        {pyjamas.map((item: ShopItemModel) => {
           return <ShopItem itemData={item} language={language} />
         })}
       </Slider>
