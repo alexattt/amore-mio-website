@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;600;700&display=swap');
 
 $dark-beige: rgba(167, 134, 129, 1);
 $light-pink: rgba(250, 223, 224, 1);
 $font-size: 16px;
-$font-montserrat: 'Montserrat', sans-serif;
+$font-main: 'Martel Sans', sans-serif;
 
 .flex-row {
   display: flex;
@@ -36,9 +36,22 @@ p {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+label,
+small,
+.invalid-feedback {
+  overflow: hidden;
+}
+
 a {
-  color: black !important;
+  color: white !important;
   cursor: pointer;
+  overflow: hidden;
 }
 
 /* Make images easier to work with */
@@ -51,10 +64,11 @@ picture {
 
 #root {
   width: 100vw;
+  background-color: white!important;
 }
 
 body {
-  font-family: $font-montserrat;
+  font-family: $font-main;
   font-size: $font-size;
   width: 100vw;
   color: black;
@@ -68,11 +82,19 @@ body {
   font-size: 11px;
   text-transform: uppercase;
   color: black;
+  font-weight: 700;
+  background-color: white;
+  transition: all 0.15s ease-in-out;
 
-  &:hover, &:focus {
+  &:hover {
+    background-color: rgb(20, 20, 20);
+    color: white;
+  }
+
+  &:focus {
     border: none;
     outline: unset;
-    color: black;
+    color: white;
   }
 }
 
@@ -80,43 +102,54 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  max-width: 1440px;
+  max-width: 1800px;
   margin: 0 auto;
 }
 
+.container-fade-in {
+  animation: fade 1.25s ease-in-out;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+}
+
 .lang-options {
+  background-color: black;
   justify-content: flex-end;
-  gap: 10px;
-  font-size: 0.85vw;
-  margin-top: 20px;
+  gap: 15px;
+  font-size: 12px;
   padding: 0px 50px;
+  padding-top: 10px;
 
   @media screen and (max-width: 500px) {
     font-size: 14px;
-    gap: 30px;
     padding: 0px 30px;
-    opacity: 0.5;
+    padding-top: 10px;
+    gap: 30px;
   }
 }
 
 .navbar-container {
   padding: 10px 50px;
-  font-size: 1vw;
+  font-size: 18px;
+  width: 100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  background-color: black;
+  color: white;
 
   #logo-img {
-    width: 100px;
+    width: 450px;
   }
 
   .navbar-items {
+    margin: 10px 0px;
     @media screen and (max-width: 500px) {
       display: none;
     }
-  }
-
-  @media screen and (max-width: 500px) {
-    justify-content: center;
   }
 }
 
@@ -127,6 +160,7 @@ body {
 
 #main-page-img {
   filter: contrast(95%);
+  filter: grayscale(100%);
   opacity: 0.85;
 }
 
@@ -134,10 +168,10 @@ body {
   position: absolute;
   margin: 0 auto;
   z-index: 1;
-  width: 50vw;
-  height: 40vh;
-  // background-color: rgba(167, 134, 129, 0.6);
-  background-color: rgba(250, 223, 224, 0.6);
+  width: 40vw;
+  height: 35vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
   backdrop-filter: blur(3px);
   top: 50%;
   left: 50%;
@@ -156,17 +190,13 @@ body {
   z-index: 2;
 }
 
-.react-multi-carousel-list {
-  height: 80vh;
-}
-
 .h2-title {
-  font-size: 1.75vw;
+  font-size: 28px;
   padding: 0px 20px;
   text-align: center;
 
   @media screen and (min-width: 2100px) {
-    font-size: 48px;
+    font-size: 36px;
   }
 
   @media screen and (max-width: 500px) {
@@ -176,12 +206,12 @@ body {
 
 .h3-title {
   font-weight: 500;
-  font-size: 1.25vw;
+  font-size: 18px;
   padding: 0px 20px;
   text-align: center;
 
   @media screen and (min-width: 2100px) {
-    font-size: 32px;
+    font-size: 21px;
   }
 
   @media screen and (max-width: 500px) {
@@ -190,9 +220,9 @@ body {
 }
 
 #shop, #about-us {
-  padding: 0px 50px;
   margin-top: 50px;
   min-height: 50vh;
+  text-align: center;
 
   @media screen and (max-width: 768px) {
     padding: 0px 15px;
@@ -200,28 +230,71 @@ body {
 }
 
 #about-us {
-  font-size: 16px;
+  justify-content: center;
+  font-size: 18px;
+  padding: 30px 80px;
 
   @media screen and (max-width: 768px) {
-    font-size: 12px;
+    font-size: 14px;
+    padding: 15px 30px;
   }
 }
 
 .about-us-text {
   align-items: center;
-  justify-content: center;
-  max-width: 80vw;
-  width: 80vw;
+  justify-content: space-around;
 
-  @media screen and (max-width: 1024px) {
-    max-width: 90vw;
-    width: 90vw;
+  .sentence {
+    width: 100%;
+    line-height: 30px;
+    word-break: break-word;
+    text-align: justify;
   }
+}
+
+#keywords {
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin-top: 30px;
+
+  .keyword {
+    font-size: 21px;
+    font-weight: 600;
+    color: $light-pink;
+    font-style: italic;
+  
+    @media screen and (max-width: 900px) {
+      font-size: 14px;
+      margin-top: 0px;
+    }
+  
+    @media screen and (max-width: 575px) {
+      font-size: 12px;
+      margin-top: 0px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    gap: 30px;
+  }
+
+  @media screen and (max-width: 575px) {
+    gap: 15px;
+  }
+}
+
+#keywords p:nth-child(odd) {
+  color: $dark-beige;
 }
 
 #contacts {
   min-height: 200px;
-  background-color: $dark-beige;
+  background-color: black;
+}
+
+#shop {
+  padding: 0px 30px;
 }
 
 .shop-items {
@@ -229,62 +302,57 @@ body {
   flex-wrap: wrap;
   align-items: center; 
   justify-content: flex-start;
-  max-width: 80vw;
-  width: 80vw;
 
   @media screen and (max-width: 1024px) {
     justify-content: center;
-    max-width: 90vw;
-    width: 90vw;
   }
 }
 
 .shop-item {
-  width: 20vw;
-  height: 20vw;
-  // flex-basis: 33%;
-  margin: 20px 40px;
   cursor: pointer;
-  overflow-x: hidden;
-
-  .shop-item-details {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    justify-content: center;
-    background-color: rgba(250, 223, 224, 0.5);
-    backdrop-filter: blur(3px);
-    transition: all 0.2s ease-in;
-  }
 
   img {
-    width: 20vw;
-    height: 20vw;
-    object-fit: cover;
-
-    @media screen and (max-width: 1024px) {
-      width: 60vw;
-      height: 60vw;
-    }
-  }
-
-  @media screen and (max-width: 1024px) {
-    width: 60vw;
-    height: 60vw;
+    margin-bottom: 10px;
   }
 }
 
-#shop ul {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
+.shop-item-description {
+  text-align: "left";
+  padding-left: "10px";
+  text-transform: "uppercase";
+  font-weight: "700";
+}
 
-  li {
-    transition: all 0.2s ease-in;
+#shop .slick-slide {
+  opacity: 0.25;
+  transition: all 0.15s ease-in-out;
 
-    &:hover {
-      opacity: 0.6;
-    }
+  &:hover {
+    transform: scale(0.99);
+  }
+}
+
+#shop .slick-center {
+  opacity: 1;
+}
+
+.slick-prev {
+  left: 1% !important;
+  z-index: 1;
+
+  &:before {
+    content: '\2039' !important;
+    font-size: 50px !important;
+  }
+}
+
+.slick-next {
+  right: 1% !important;
+  z-index: 1;
+
+  &:before {
+    content: '\203A' !important;
+    font-size: 50px !important;
   }
 }
 
@@ -294,48 +362,6 @@ body {
 
 #comments {
   height: 80px;
-}
-
-#keywords {
-  @media screen and (max-width: 768px) {
-    // flex-direction: column;
-    gap: 5px;
-    margin-bottom: 20px;
-  }
-}
-
-#keywords p:nth-child(even) {
-  font-size: 21px;
-  font-weight: 600;
-  margin-top: 50px;
-  color: $light-pink;
-  font-style: italic;
-
-  @media screen and (max-width: 768px) {
-    font-size: 14px;
-    margin-top: 0px;
-  }
-
-  @media screen and (max-width: 575px) {
-    font-size: 12px;
-    margin-top: 0px;
-  }
-}
-
-#keywords p:nth-child(odd) {
-  font-size: 21px;
-  font-weight: 600;
-  color: $dark-beige;
-
-  @media screen and (max-width: 768px) {
-    font-size: 14px;
-    margin-top: 0px;
-  }
-
-  @media screen and (max-width: 575px) {
-    font-size: 12px;
-    margin-top: 0px;
-  }
 }
 
 .horizontal-title {
@@ -360,9 +386,33 @@ body {
 }
 
 #order-form {
+  justify-content: center;
   align-items: center;
+  background-color: rgb(27, 27, 27);
+  color: white;
+  padding: 0px 15px;
+
+  .order-form-inputs {
+    height: 90vh;
+    margin-top: 20px;
+    padding: 0px 70px;
+
+    @media screen and (max-width: 768px) {
+      padding: 0px 10px;
+    }
+  }
 }
 
-// #order-form > div.order-form-images > div {
+#order-form > div > div > div > .slick-slide {
+  height: 90vh !important;
+  overflow: hidden;
 
-// }
+  @media screen and (max-width: 768px) {
+    overflow: auto;
+  }
+}
+
+#order-form img {
+  max-height: 90vh !important;
+  object-fit: contain !important;
+}

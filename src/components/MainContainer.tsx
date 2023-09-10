@@ -1,27 +1,18 @@
-import React, { useContext } from 'react'
-import Carousel from 'react-multi-carousel';
+import React, { memo, useContext } from 'react'
 import { langContext } from '../App';
+import Slider from "react-slick";
+import { useWindowSize } from '../utils/helpers';
 
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1
-  }
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 1000,
+  autoplay: true,
+  arrows: false
 };
 
 const MainContainer = () => {
+  const size = useWindowSize();
   const translations = useContext(langContext);
 
   return (
@@ -33,16 +24,17 @@ const MainContainer = () => {
           <h3 className='h3-title'>{translations.mainPage['catchphrase']}</h3>
         </div>
       </div>
-      <Carousel responsive={responsive} autoPlay={true} autoPlaySpeed={3000} transitionDuration={5000} arrows={false} draggable={false} shouldResetAutoplay={true} rewindWithAnimation={true} infinite={true}>
-        <img id='main-page-img' src="/images/main_img1.JPG" alt="" />
-        <img id='main-page-img' src="/images/main_img2.jpg" alt="" />
-        <img id='main-page-img' src="/images/main_img3.JPG" alt="" />
-        <img id='main-page-img' src="/images/main_img4.JPG" alt="" />
-        <img id='main-page-img' src="/images/main_img5.JPG" alt="" />
-        <img id='main-page-img' src="/images/main_img6.JPEG" alt="" />
-      </Carousel>
+      <Slider {...settings} slidesToShow={size.width < 1000 ? 1 : 3}>
+        <img id='main-page-img' src="/images/main/main_img2.JPG" alt="" />
+        <img id='main-page-img' src="/images/main/main_img1.jpg" alt="" />
+        <img id='main-page-img' src="/images/main/main_img4.JPG" alt="" />
+        <img id='main-page-img' src="/images/main/main_img8.JPG" alt="" />
+        <img id='main-page-img' src="/images/main/main_img6.JPG" alt="" />
+        <img id='main-page-img' src="/images/main/main_img7.jpeg" alt="" />
+        <img id='main-page-img' src="/images/main/main_img3.JPG" alt="" />
+      </Slider>
     </div>
   )
 }
 
-export default MainContainer
+export default memo(MainContainer)

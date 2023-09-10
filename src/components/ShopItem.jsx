@@ -1,49 +1,8 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, memo } from 'react'
 import Modal from 'react-modal';
 import { langContext } from '../App';
 import OrderForm from './OrderForm';
-
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    width: '90vw',
-    height: '90vh',
-    zIndex: '10100 !important',
-    transform: 'translate(-50%, -50%)',
-  },
-};
-
-const customSuccessStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    width: '70vw',
-    zIndex: '10100 !important',
-    transform: 'translate(-50%, -50%)',
-    border: "2px solid #80D377"
-  },
-};
-
-const customFailStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    width: '70vw',
-    zIndex: '10100 !important',
-    transform: 'translate(-50%, -50%)',
-    border: "2px solid #FF5D5D"
-  },
-};
+import { customFailStyles, customSuccessStyles, customStyles } from '../utils/styles';
 
 Modal.setAppElement('#root');
 
@@ -54,16 +13,6 @@ const ShopItem = ({ itemData, language }) =>
   const [failDialogOpen, setFailDialogOpen] = useState(false)
 
   const translations = useContext(langContext);
-
-  const handleMouseOver = (event) =>
-  {
-    event.target.style.opacity = 1;
-  }
-
-  const handleMouseOut = (event) =>
-  {
-    event.target.style.opacity = 0;
-  }
 
   const handleItemClick = () =>
   {
@@ -121,21 +70,13 @@ const ShopItem = ({ itemData, language }) =>
         </div>
       )}
       <div className='shop-item' onClick={handleItemClick}>
-        <img src={itemData.images[0]} style={{ position: 'absolute' }} />
-        <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className='shop-item-details flex-column'
-          style={{ opacity: 0, fontSize: '1rem', fontWeight: '500' }}
-        >
-          {itemData.itemName}
-          <br />
-          {itemData.itemPrice}€
-          <br />
-          <br />
-          {itemData.availableSizes.join(" ")}
-          <br />
+        <img src={itemData.images[0]} />
+        <div>
+          <p style={{textAlign: "left", paddingLeft: "10px", textTransform: "uppercase", fontWeight: "700"}}>{itemData.itemName}</p>
         </div>
       </div>
     </>
   )
 }
 
-export default ShopItem
+export default memo(ShopItem)
