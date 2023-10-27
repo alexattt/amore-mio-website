@@ -55,7 +55,7 @@ export const translations: any = {
         {
           id: "pyjama",
           itemName: "Melna satīna pidžama",
-          itemPrice: 25,
+          itemPrice: 30,
           availableSizes: ["XS", "S", "M"],
           availableColors: ["Melna"],
           images: [
@@ -69,7 +69,7 @@ export const translations: any = {
         {
           id: "pyjama",
           itemName: "Tirkīza satīna pidžama",
-          itemPrice: 25,
+          itemPrice: 30,
           availableSizes: ["XS", "S", "M"],
           availableColors: ["Tirkīza"],
           images: [
@@ -83,7 +83,7 @@ export const translations: any = {
         {
           id: "pyjama",
           itemName: "Balta satīna pidžama",
-          itemPrice: 25,
+          itemPrice: 30,
           availableSizes: ["XS", "S", "M"],
           availableColors: ["Balta"],
           images: [
@@ -176,7 +176,7 @@ export const translations: any = {
         {
           id: "pyjama",
           itemName: "Black satin pyjama",
-          itemPrice: 25,
+          itemPrice: 30,
           availableSizes: ["XS", "S", "M"],
           availableColors: ["Black"],
           images: [
@@ -190,7 +190,7 @@ export const translations: any = {
         {
           id: "pyjama",
           itemName: "Teal satin pyjama",
-          itemPrice: 25,
+          itemPrice: 30,
           availableSizes: ["XS", "S", "M"],
           availableColors: ["Teal"],
           images: [
@@ -204,7 +204,7 @@ export const translations: any = {
         {
           id: "pyjama",
           itemName: "White satin pyjama",
-          itemPrice: 25,
+          itemPrice: 30,
           availableSizes: ["XS", "S", "M"],
           availableColors: ["White"],
           images: [
@@ -297,7 +297,7 @@ export const translations: any = {
         {
           id: "pyjama",
           itemName: "Черная сатиновая пижама",
-          itemPrice: 25,
+          itemPrice: 30,
           availableSizes: ["XS", "S", "M"],
           availableColors: ["Черная"],
           images: [
@@ -311,7 +311,7 @@ export const translations: any = {
         {
           id: "pyjama",
           itemName: "Бирюзовая сатиновая пижама",
-          itemPrice: 25,
+          itemPrice: 30,
           availableSizes: ["XS", "S", "M"],
           availableColors: ["Бирюзовая"],
           images: [
@@ -325,7 +325,7 @@ export const translations: any = {
         {
           id: "pyjama",
           itemName: "Белая сатиновая пижама",
-          itemPrice: 25,
+          itemPrice: 30,
           availableSizes: ["XS", "S", "M"],
           availableColors: ["Белая"],
           images: [
