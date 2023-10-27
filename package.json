@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@babel/traverse": "^7.23.2",
     "@emailjs/browser": "^3.11.0",
     "bootstrap": "^5.2.3",
     "react": "^18.2.0",
