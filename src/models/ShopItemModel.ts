@@ -4,4 +4,5 @@ export interface ShopItemModel {
   availableSizes: string[];
   availableColors: string[];
   images: string[];
+  stripeBtnId: string | undefined;
 }

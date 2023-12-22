@@ -81,6 +81,7 @@ body {
   font-weight: 700;
   background-color: white;
   transition: all 0.15s ease-in-out;
+  height: 50px;
 }
 .custom-btn:hover {
   background-color: rgb(20, 20, 20);
@@ -219,13 +220,15 @@ body {
   }
 }
 
-#shop, #about-us {
+#shop,
+#about-us {
   margin-top: 50px;
   min-height: 50vh;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
-  #shop, #about-us {
+  #shop,
+  #about-us {
     padding: 0px 15px;
   }
 }
@@ -357,7 +360,14 @@ body {
   font-size: 50px !important;
 }
 
-#sizeSelect, #colorSelect, #emailInput, #phoneNumberInput, #usernameInput, #amountSelect, #contactTypeSelect, textarea {
+#sizeSelect,
+#colorSelect,
+#emailInput,
+#phoneNumberInput,
+#usernameInput,
+#amountSelect,
+#contactTypeSelect,
+textarea {
   height: 30px;
   color: white;
   background-color: rgb(53, 53, 53);
@@ -399,9 +409,9 @@ body {
   background-color: rgb(27, 27, 27);
   color: white;
   padding: 0px 15px;
+  height: auto;
 }
 #order-form .order-form-inputs {
-  height: 90vh;
   margin-top: 20px;
   padding: 0px 70px;
 }
@@ -416,7 +426,7 @@ body {
 
 #order-form > div > div > div > .slick-slide {
   height: 90vh !important;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 @media screen and (max-width: 768px) {
   #order-form > div > div > div > .slick-slide {
@@ -428,4 +438,19 @@ body {
   max-height: 90vh !important;
   -o-object-fit: contain !important;
      object-fit: contain !important;
+}
+
+.BuyButton-Button {
+  width: 100px !important;
+}
+
+.order-summary-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.slick-active {
+  z-index: 9999;
 }/*# sourceMappingURL=main.css.map */

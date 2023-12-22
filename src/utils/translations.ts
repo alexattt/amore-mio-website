@@ -17,6 +17,7 @@ export const translations: any = {
           id: "robe",
           itemName: "Melns satīna halāts",
           itemPrice: 45,
+          stripeBtnId: "buy_btn_1OQI6DLschlgqcbQII1cROAD",
           availableSizes: ["S", "M"],
           availableColors: ["Melns"],
           images: [
@@ -25,12 +26,14 @@ export const translations: any = {
             "/images/shop-items/black-satin-robe/robe3.JPG",
             "/images/shop-items/black-satin-robe/robe4.JPG",
           ],
+          isSoldOut: false,
         },
         {
           id: "robe",
           itemName: "Rozā satīna halāts",
           itemPrice: 45,
-          availableSizes: ["XS", "S", "M"],
+          stripeBtnId: "buy_btn_1OQIBVLschlgqcbQHCt8x98H",
+          availableSizes: ["S", "M"],
           availableColors: ["Rozā"],
           images: [
             "/images/shop-items/pink-satin-robe/robe1.JPG",
@@ -38,11 +41,13 @@ export const translations: any = {
             "/images/shop-items/pink-satin-robe/robe3.JPG",
             "/images/shop-items/pink-satin-robe/robe4.jpeg",
           ],
+          isSoldOut: false,
         },
         {
           id: "robe",
           itemName: "Balts satīna halāts",
           itemPrice: 45,
+          stripeBtnId: "buy_btn_1OQII0LschlgqcbQVC1EtKKI",
           availableSizes: ["XS", "S", "M"],
           availableColors: ["Balts"],
           images: [
@@ -51,12 +56,13 @@ export const translations: any = {
             "/images/shop-items/white-satin-robe/robe3.JPG",
             "/images/shop-items/white-satin-robe/robe4.JPG",
           ],
+          isSoldOut: false,
         },
         {
           id: "pyjama",
           itemName: "Melna satīna pidžama",
           itemPrice: 30,
-          availableSizes: ["S", "M", "L"],
+          availableSizes: [],
           availableColors: ["Melna"],
           images: [
             "/images/shop-items/black-satin-pyjama/pyjama1.jpeg",
@@ -65,11 +71,13 @@ export const translations: any = {
             "/images/shop-items/black-satin-pyjama/pyjama4.jpeg",
             "/images/shop-items/black-satin-pyjama/pyjama5.jpeg",
           ],
+          isSoldOut: true,
         },
         {
           id: "pyjama",
           itemName: "Tirkīza satīna pidžama",
           itemPrice: 30,
+          stripeBtnId: "buy_btn_1OQIU8LschlgqcbQIA4BwOWU",
           availableSizes: ["S", "M", "L"],
           availableColors: ["Tirkīza"],
           images: [
@@ -79,11 +87,13 @@ export const translations: any = {
             "/images/shop-items/teal-satin-pyjama/pyjama4.jpeg",
             "/images/shop-items/teal-satin-pyjama/pyjama5.jpeg",
           ],
+          isSoldOut: false,
         },
         {
           id: "pyjama",
           itemName: "Balta satīna pidžama",
           itemPrice: 30,
+          stripeBtnId: "buy_btn_1OQIW3LschlgqcbQAZ6Kb5J3",
           availableSizes: ["S", "M", "L"],
           availableColors: ["Balta"],
           images: [
@@ -91,12 +101,14 @@ export const translations: any = {
             "/images/shop-items/white-satin-pyjama/pyjama2.jpeg",
             "/images/shop-items/white-satin-pyjama/pyjama3.jpeg",
           ],
+          isSoldOut: false,
         },
         {
           id: "robe",
           itemName: "Melns halāts",
           itemPrice: 45,
-          availableSizes: ["S", "M", "L", "XL"],
+          stripeBtnId: "buy_btn_1OQGslLschlgqcbQt0bR4AMK",
+          availableSizes: ["S", "L"],
           availableColors: ["Melns"],
           images: [
             "/images/shop-items/black-fluffy-robe/robe1.JPG",
@@ -104,6 +116,7 @@ export const translations: any = {
             "/images/shop-items/black-fluffy-robe/robe3.JPG",
             "/images/shop-items/black-fluffy-robe/robe4.jpeg",
           ],
+          isSoldOut: false,
         },
       ],
     },
@@ -121,6 +134,7 @@ export const translations: any = {
       orderAccepted: "Pasūtījums veiksmīgi pieņemts!",
       orderDenied:
         "Problēma ar pasūtījuma apstrādi. Vēlāk mēģiniet vēlreiz vai sazinieties ar mums soctīklos!",
+      callToPayOnline: "Ja vēlaties veikt maksājumu tiešsaistē, spiediet pogu zemāk!",
     },
     orderFormValidation: {
       emptyField: "Lauks nedrīkst būt tukšs",
@@ -151,6 +165,7 @@ export const translations: any = {
           id: "robe",
           itemName: "Black satin robe",
           itemPrice: 45,
+          stripeBtnId: "buy_btn_1OQI6DLschlgqcbQII1cROAD",
           availableSizes: ["S", "M"],
           availableColors: ["Black"],
           images: [
@@ -159,12 +174,14 @@ export const translations: any = {
             "/images/shop-items/black-satin-robe/robe3.JPG",
             "/images/shop-items/black-satin-robe/robe4.JPG",
           ],
+          isSoldOut: false,
         },
         {
           id: "robe",
           itemName: "Pink satin robe",
           itemPrice: 45,
-          availableSizes: ["XS", "S", "M"],
+          stripeBtnId: "buy_btn_1OQIBVLschlgqcbQHCt8x98H",
+          availableSizes: ["S", "M"],
           availableColors: ["Pink"],
           images: [
             "/images/shop-items/pink-satin-robe/robe1.JPG",
@@ -172,11 +189,13 @@ export const translations: any = {
             "/images/shop-items/pink-satin-robe/robe3.JPG",
             "/images/shop-items/pink-satin-robe/robe4.jpeg",
           ],
+          isSoldOut: false,
         },
         {
           id: "robe",
           itemName: "White satin robe",
           itemPrice: 45,
+          stripeBtnId: "buy_btn_1OQII0LschlgqcbQVC1EtKKI",
           availableSizes: ["XS", "S", "M"],
           availableColors: ["White"],
           images: [
@@ -185,12 +204,13 @@ export const translations: any = {
             "/images/shop-items/white-satin-robe/robe3.JPG",
             "/images/shop-items/white-satin-robe/robe4.JPG",
           ],
+          isSoldOut: false,
         },
         {
           id: "pyjama",
           itemName: "Black satin pyjama",
           itemPrice: 30,
-          availableSizes: ["S", "M", "L"],
+          availableSizes: [],
           availableColors: ["Black"],
           images: [
             "/images/shop-items/black-satin-pyjama/pyjama1.jpeg",
@@ -199,11 +219,13 @@ export const translations: any = {
             "/images/shop-items/black-satin-pyjama/pyjama4.jpeg",
             "/images/shop-items/black-satin-pyjama/pyjama5.jpeg",
           ],
+          isSoldOut: true,
         },
         {
           id: "pyjama",
           itemName: "Teal satin pyjama",
           itemPrice: 30,
+          stripeBtnId: "buy_btn_1OQIU8LschlgqcbQIA4BwOWU",
           availableSizes: ["S", "M", "L"],
           availableColors: ["Teal"],
           images: [
@@ -213,11 +235,13 @@ export const translations: any = {
             "/images/shop-items/teal-satin-pyjama/pyjama4.jpeg",
             "/images/shop-items/teal-satin-pyjama/pyjama5.jpeg",
           ],
+          isSoldOut: false,
         },
         {
           id: "pyjama",
           itemName: "White satin pyjama",
           itemPrice: 30,
+          stripeBtnId: "buy_btn_1OQIW3LschlgqcbQAZ6Kb5J3",
           availableSizes: ["S", "M", "L"],
           availableColors: ["White"],
           images: [
@@ -225,12 +249,14 @@ export const translations: any = {
             "/images/shop-items/white-satin-pyjama/pyjama2.jpeg",
             "/images/shop-items/white-satin-pyjama/pyjama3.jpeg",
           ],
+          isSoldOut: false,
         },
         {
           id: "robe",
           itemName: "Black robe",
           itemPrice: 45,
-          availableSizes: ["S", "M", "L", "XL"],
+          stripeBtnId: "buy_btn_1OQGslLschlgqcbQt0bR4AMK",
+          availableSizes: ["S", "L"],
           availableColors: ["Black"],
           images: [
             "/images/shop-items/black-fluffy-robe/robe1.JPG",
@@ -238,6 +264,7 @@ export const translations: any = {
             "/images/shop-items/black-fluffy-robe/robe3.JPG",
             "/images/shop-items/black-fluffy-robe/robe4.jpeg",
           ],
+          isSoldOut: false,
         },
       ],
     },
@@ -255,6 +282,7 @@ export const translations: any = {
       orderAccepted: "Your order has been accepted!",
       orderDenied:
         "Something went wrong. Try again later or get in touch with us on our social media!",
+      callToPayOnline: "If you wish to pay online, press button below!",
     },
     orderFormValidation: {
       emptyField: "Field cannot be empty",
@@ -285,6 +313,7 @@ export const translations: any = {
           id: "robe",
           itemName: "Черный сатиновый халат",
           itemPrice: 45,
+          stripeBtnId: "buy_btn_1OQI6DLschlgqcbQII1cROAD",
           availableSizes: ["S", "M"],
           availableColors: ["Черный"],
           images: [
@@ -293,12 +322,14 @@ export const translations: any = {
             "/images/shop-items/black-satin-robe/robe3.JPG",
             "/images/shop-items/black-satin-robe/robe4.JPG",
           ],
+          isSoldOut: false,
         },
         {
           id: "robe",
           itemName: "Розовый сатиновый халат",
           itemPrice: 45,
-          availableSizes: ["XS", "S", "M"],
+          stripeBtnId: "buy_btn_1OQIBVLschlgqcbQHCt8x98H",
+          availableSizes: ["S", "M"],
           availableColors: ["Розовый"],
           images: [
             "/images/shop-items/pink-satin-robe/robe1.JPG",
@@ -306,11 +337,13 @@ export const translations: any = {
             "/images/shop-items/pink-satin-robe/robe3.JPG",
             "/images/shop-items/pink-satin-robe/robe4.jpeg",
           ],
+          isSoldOut: false,
         },
         {
           id: "robe",
           itemName: "Белый сатиновый халат",
           itemPrice: 45,
+          stripeBtnId: "buy_btn_1OQII0LschlgqcbQVC1EtKKI",
           availableSizes: ["XS", "S", "M"],
           availableColors: ["Белый"],
           images: [
@@ -319,12 +352,13 @@ export const translations: any = {
             "/images/shop-items/white-satin-robe/robe3.JPG",
             "/images/shop-items/white-satin-robe/robe4.JPG",
           ],
+          isSoldOut: false,
         },
         {
           id: "pyjama",
           itemName: "Черная сатиновая пижама",
           itemPrice: 30,
-          availableSizes: ["S", "M", "L"],
+          availableSizes: [],
           availableColors: ["Черная"],
           images: [
             "/images/shop-items/black-satin-pyjama/pyjama1.jpeg",
@@ -333,11 +367,13 @@ export const translations: any = {
             "/images/shop-items/black-satin-pyjama/pyjama4.jpeg",
             "/images/shop-items/black-satin-pyjama/pyjama5.jpeg",
           ],
+          isSoldOut: true,
         },
         {
           id: "pyjama",
           itemName: "Бирюзовая сатиновая пижама",
           itemPrice: 30,
+          stripeBtnId: "buy_btn_1OQIU8LschlgqcbQIA4BwOWU",
           availableSizes: ["S", "M", "L"],
           availableColors: ["Бирюзовая"],
           images: [
@@ -347,11 +383,13 @@ export const translations: any = {
             "/images/shop-items/teal-satin-pyjama/pyjama4.jpeg",
             "/images/shop-items/teal-satin-pyjama/pyjama5.jpeg",
           ],
+          isSoldOut: false,
         },
         {
           id: "pyjama",
           itemName: "Белая сатиновая пижама",
           itemPrice: 30,
+          stripeBtnId: "buy_btn_1OQIW3LschlgqcbQAZ6Kb5J3",
           availableSizes: ["S", "M", "L"],
           availableColors: ["Белая"],
           images: [
@@ -359,12 +397,14 @@ export const translations: any = {
             "/images/shop-items/white-satin-pyjama/pyjama2.jpeg",
             "/images/shop-items/white-satin-pyjama/pyjama3.jpeg",
           ],
+          isSoldOut: false,
         },
         {
           id: "robe",
           itemName: "Черный халат",
           itemPrice: 45,
-          availableSizes: ["S", "M", "L", "XL"],
+          stripeBtnId: "buy_btn_1OQGslLschlgqcbQt0bR4AMK",
+          availableSizes: ["S", "L"],
           availableColors: ["Черный"],
           images: [
             "/images/shop-items/black-fluffy-robe/robe1.JPG",
@@ -372,6 +412,7 @@ export const translations: any = {
             "/images/shop-items/black-fluffy-robe/robe3.JPG",
             "/images/shop-items/black-fluffy-robe/robe4.jpeg",
           ],
+          isSoldOut: false,
         },
       ],
     },
@@ -388,6 +429,7 @@ export const translations: any = {
       orderSum: "Сумма заказа",
       orderAccepted: "Ваш заказ успешно принят!",
       orderDenied: "Что то пошло не так. Пробуйте сново потом или свяжитесь с нами в соцсетях!",
+      callToPayOnline: "Если желаете оплатить онлайн, жмите кнопку ниже!",
     },
     orderFormValidation: {
       emailEmpty: "Поле не может остаться пустым",
