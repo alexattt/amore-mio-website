@@ -1,4 +1,4 @@
-import React, { memo, useContext, useRef, useState } from "react";
+import { memo, useContext, useRef, useState } from "react";
 import { ShopItemModel } from "../models/ShopItemModel";
 import Slider from "react-slick";
 import { Form, FormFeedback, FormGroup, FormText, Input, Label } from "reactstrap";
@@ -143,9 +143,9 @@ const OrderForm = ({
         clientLang: language,
       };
 
-      // console.log(templateParams)
-      // setIsDialogOpen(false)
-      // setSuccessDialogOpen(true)
+      // console.log(templateParams);
+      // setIsDialogOpen(false);
+      // setSuccessDialogOpen(true);
 
       emailjs
         .send(
@@ -185,7 +185,7 @@ const OrderForm = ({
                 <Label for="sizeSelect">{translations.orderForm["selectSize"]}</Label>
                 <Input id="sizeSelect" name="sizeSelect" type="select" height="150px" required>
                   {itemData.availableSizes.map((item) => {
-                    return <option>{item}</option>;
+                    return <option key={item}>{item}</option>;
                   })}
                 </Input>
               </FormGroup>
@@ -193,7 +193,7 @@ const OrderForm = ({
                 <Label for="colorSelect">{translations.orderForm["selectColor"]}</Label>
                 <Input id="colorSelect" name="colorSelect" type="select" required>
                   {itemData.availableColors.map((item) => {
-                    return <option>{item}</option>;
+                    return <option key={item}>{item}</option>;
                   })}
                 </Input>
               </FormGroup>
@@ -227,7 +227,7 @@ const OrderForm = ({
                   required
                 >
                   {translations.orderForm["contactTypes"].map((item: string) => {
-                    return <option>{item}</option>;
+                    return <option key={item}>{item}</option>;
                   })}
                 </Input>
               </FormGroup>
@@ -264,12 +264,24 @@ const OrderForm = ({
                   )}
                 </FormGroup>
               )}
-              <FormText style={{ fontSize: "16px", fontWeight: "600" }}>
-                Total order sum: {itemData.itemPrice * itemAmount}€
-              </FormText>
-              <button className="custom-btn" style={{ fontSize: "16px" }} type="submit">
-                Submit
-              </button>
+              <div className="order-summary-buttons">
+                <FormText
+                  style={{
+                    fontSize: "16px",
+                    fontWeight: "600",
+                    marginRight: "16px",
+                  }}
+                >
+                  Total order sum: {itemData.itemPrice * itemAmount}€
+                </FormText>
+                <button
+                  className="custom-btn"
+                  style={{ fontSize: "16px", marginRight: "16px" }}
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
             </Form>
           </div>
           {carouselImages.map((image, index) => {
