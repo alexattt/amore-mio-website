@@ -108,7 +108,7 @@ export const translations: any = {
           itemName: "Melns halāts",
           itemPrice: 45,
           stripeBtnId: "buy_btn_1OQGslLschlgqcbQt0bR4AMK",
-          availableSizes: ["S", "L"],
+          availableSizes: ["S"],
           availableColors: ["Melns"],
           images: [
             "/images/shop-items/black-fluffy-robe/robe1.JPG",
@@ -256,7 +256,7 @@ export const translations: any = {
           itemName: "Black robe",
           itemPrice: 45,
           stripeBtnId: "buy_btn_1OQGslLschlgqcbQt0bR4AMK",
-          availableSizes: ["S", "L"],
+          availableSizes: ["S"],
           availableColors: ["Black"],
           images: [
             "/images/shop-items/black-fluffy-robe/robe1.JPG",
@@ -404,7 +404,7 @@ export const translations: any = {
           itemName: "Черный халат",
           itemPrice: 45,
           stripeBtnId: "buy_btn_1OQGslLschlgqcbQt0bR4AMK",
-          availableSizes: ["S", "L"],
+          availableSizes: ["S"],
           availableColors: ["Черный"],
           images: [
             "/images/shop-items/black-fluffy-robe/robe1.JPG",
